@@ -1,4 +1,4 @@
-name: custom_workflow
+name: Custom Workflow
 on: workflow_dispatch
 jobs:
   Explore-GitHub-Actions:
