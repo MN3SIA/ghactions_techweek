@@ -1,1 +1,14 @@
-
+name: custom_workflow
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 El nom del event es ${{ github.event_name }}."
+      - run: echo "🐧 Estem treballant sobre el repositori ${{ github.repository }}"
+      - name: Load repository
+        uses: actions/checkout@v2
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
